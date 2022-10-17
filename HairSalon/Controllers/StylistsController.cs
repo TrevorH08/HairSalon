@@ -17,7 +17,7 @@ namespace HairSalon.Controllers
 
     public ActionResult Index()
     {
-      List<Sytlist> model = _db.Stylists.ToList();
+      List<Stylist> model = _db.Stylists.ToList();
       return View(model);
     }
 
@@ -63,7 +63,7 @@ namespace HairSalon.Controllers
     [HttpPost, ActionName("Delete")]
     public ActionResult DeleteConfirmed(int id)
     {
-      var thisStylist = _.db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
+      var thisStylist = _db.Stylists.FirstOrDefault(stylist => stylist.StylistId == id);
       _db.SaveChanges();
       return RedirectToAction("Index");
     }

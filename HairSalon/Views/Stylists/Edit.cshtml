@@ -2,7 +2,7 @@
   Layout = "_Layout";
 }
 
-@using HairSalon.Models.stylist
+@model HairSalon.Models.Stylist
 
 <h2>Edit</h2>
 
@@ -10,7 +10,7 @@
 
 @using (Html.BeginForm())
 {
-  @HtmlHiddenFor(model => model.StylistId)
+  @Html.HiddenFor(model => model.StylistId)
 
   @Html.LabelFor(model => model.Name)
   @Html.EditorFor(model => model.Name)
