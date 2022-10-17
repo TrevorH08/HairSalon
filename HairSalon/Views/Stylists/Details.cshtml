@@ -7,6 +7,21 @@
 <h2>Stylist Details</h2>
 <hr />
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+<h3>@Html.DisplayNameFor(model => model.Specialty): @Html.DisplayFor(model => model.Specialty)</h3>
+<h4>This Stylist's Customers</h4>
+@if(Model.Customers.Count == 0)
+{
+  <p>This Stylist has no customers yet!</p>
+}
+
+<ul>
+  @foreach (var customer in Model.Customers)
+  {
+    <li>@Html.ActionLink($"{customer.Name}", "Details", "Customers", new { id = customer.CustomerId }) | @customer.Description</li>
+  }
+</ul>
+
+<p>@Html.ActionLink("Add customer", "Create", "Customers")</p>
 <p>@Html.ActionLink("Edit Stylist", "Edit", new { id = Model.StylistId })</p>
 <p>@Html.ActionLink("Delete Stylist", "Delete", new { id = Model.StylistId })</p>
 <p>@Html.ActionLink("Back to list", "Index")</p>
