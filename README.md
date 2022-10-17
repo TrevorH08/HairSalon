@@ -1,4 +1,4 @@
-# _{Application Name}_
+# _Hair Salon_
 
 #### By _**{List of contributors}**_
 

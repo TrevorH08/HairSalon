@@ -6,4 +6,14 @@ using System;
 
 namespace HairSalon.Tests
 {
+
+  [TestClass]
+  public class StylistTests : IDisposable
+  {
+
+    public void Dispose()
+    {
+      Stylist.ClearAll();
+    }
+  }
   }
