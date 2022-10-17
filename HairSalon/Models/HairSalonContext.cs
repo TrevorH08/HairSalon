@@ -7,5 +7,10 @@ namespace HairSalon.Models
     public DbSet<Stylist> Stylists { get; set; }
 
     public HairSalonContext(DbContextOptions options) : base(options) { }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+      optionsBuilder.UseLazyLoadingProxies();
+    }
   }
 }
