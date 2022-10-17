@@ -1,6 +1,6 @@
 # _Hair Salon_
 
-#### By _**{List of contributors}**_
+#### By _**Trevor Hunter**_
 
 #### _{Brief description of application}_
 
